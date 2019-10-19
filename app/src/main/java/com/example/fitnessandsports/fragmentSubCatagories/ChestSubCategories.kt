@@ -24,6 +24,7 @@ class ChestSubCategories : BaseFragment() {
 
         baseActivity = activity as BaseActivity
         baseActivity.mToolbarTextview.text= "Chest"
+        baseActivity.mCoin.visibility = View.GONE
         mRelativeLayoutOne.setOnClickListener { chest() }
     }
     private fun chest(){

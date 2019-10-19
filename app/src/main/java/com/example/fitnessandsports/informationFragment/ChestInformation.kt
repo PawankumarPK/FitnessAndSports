@@ -22,7 +22,6 @@ import kotlinx.android.synthetic.main.fragment_chest_information.*
 import java.util.*
 import kotlin.collections.ArrayList
 import android.os.CountDownTimer
-import com.example.fitnessandsports.informationFragment.ChestInformation.MyCounter
 
 
 /**
@@ -43,6 +42,7 @@ class ChestInformation : BaseFragment() {
 
         baseActivity = activity as BaseActivity
         baseActivity.mToolbarTextview.text= "Workout"
+        baseActivity.mCoin.visibility = View.GONE
 
         data = fill_with_data()
 
@@ -74,6 +74,14 @@ class ChestInformation : BaseFragment() {
         }
 
 
+    }
+
+
+    override fun setUserVisibleHint(isVisibleToUser: Boolean) {
+        super.setUserVisibleHint(isVisibleToUser)
+        if (!isVisibleToUser) {
+            mTimer.text = " "
+        }
     }
 
 
@@ -134,12 +142,13 @@ class ChestInformation : BaseFragment() {
             mStartTimer.visibility = View.VISIBLE
             mTimer.visibility = View.GONE
             mSetComplete.visibility = View.VISIBLE
+            baseActivity.mCoin.visibility = View.VISIBLE
+
 
         }
 
         override fun onTick(millisUntilFinished: Long) {
             mTimer.text = (millisUntilFinished / 1000).toString() + ""
-            println("Timer  : " + millisUntilFinished / 1000)
         }
     }
 

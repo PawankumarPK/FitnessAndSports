@@ -34,7 +34,8 @@
                 android:layout_toRightOf="@+id/mChest"
                 android:fontFamily="@font/comfortaa_bold"
                 android:gravity="center"
-                android:text="BENCH PRESS"
+                android:textAllCaps="false"
+                android:text="Bench Press"
                 android:textColor="@color/black"
                 android:textSize="@dimen/textViewSize"
                 android:textStyle="bold" />
@@ -72,7 +73,7 @@
                 android:layout_toRightOf="@+id/mBack"
                 android:fontFamily="@font/comfortaa_bold"
                 android:gravity="center"
-                android:text="DUMBBELL                   PRESS"
+                android:text="Dumbbell Press"
                 android:textColor="@color/black"
                 android:textSize="@dimen/textViewSize"
                 android:textStyle="bold" />
@@ -112,8 +113,7 @@
                 android:layout_toRightOf="@+id/mAbs"
                 android:fontFamily="@font/comfortaa_bold"
                 android:gravity="center"
-                android:textAllCaps="true"
-                android:text="INCLINE PRESS"
+                android:text="Incline Press"
                 android:textColor="@color/black"
                 android:textSize="@dimen/textViewSize"
                 android:textStyle="bold" />

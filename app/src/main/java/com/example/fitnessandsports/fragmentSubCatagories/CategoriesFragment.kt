@@ -22,6 +22,7 @@ class CategoriesFragment : BaseFragment() {
 
         baseActivity = activity as BaseActivity
         baseActivity.mToolbarTextview.text= "Categories"
+        baseActivity.mCoin.visibility = View.GONE
 
         mRelativeLayoutChest.setOnClickListener { chest() }
         mRelativeLayoutBack.setOnClickListener { back() }
