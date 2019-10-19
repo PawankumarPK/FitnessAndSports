@@ -21,6 +21,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_chest_information.*
 import java.util.*
 import kotlin.collections.ArrayList
+import android.os.CountDownTimer
+import com.example.fitnessandsports.informationFragment.ChestInformation.MyCounter
 
 
 /**
@@ -44,10 +46,20 @@ class ChestInformation : BaseFragment() {
 
         data = fill_with_data()
 
+        val timer = MyCounter(60000, 1000)
+
         horizontalAdapter = HorizontalAdapter(data!!, baseActivity)
         val horizontalLayoutManager = LinearLayoutManager(baseActivity, LinearLayoutManager.HORIZONTAL, false)
         mRecyclerview!!.layoutManager = horizontalLayoutManager
         mRecyclerview!!.adapter = horizontalAdapter
+
+        mStartTimer.setOnClickListener {
+            timer.start()
+            mStartTimer.visibility = View.GONE
+            mTimer.visibility = View.VISIBLE
+            mSetComplete.visibility = View.GONE
+
+        }
 
         videoFB.setOnClickListener {
             fragmentManager!!.beginTransaction().addToBackStack(null)
@@ -64,15 +76,14 @@ class ChestInformation : BaseFragment() {
 
     }
 
+
     fun fill_with_data(): List<Data> {
 
-        val data = ArrayList<Data>()!!
-
+        val data = ArrayList<Data>()
         data.add(Data(R.drawable.bench))
         data.add(Data(R.drawable.benchpresses))
         data.add(Data(R.drawable.benchpressestwo))
         data.add(Data(R.drawable.benchpressesthree))
-
 
         return data
     }
@@ -113,5 +124,23 @@ class ChestInformation : BaseFragment() {
         }
     }
 
+
+    inner class MyCounter(millisInFuture: Long, countDownInterval: Long) :
+        CountDownTimer(millisInFuture, countDownInterval) {
+
+        override fun onFinish() {
+            println("Timer Completed.")
+            mTimer.text = "Set Complete 2 more sets left.."
+            mStartTimer.visibility = View.VISIBLE
+            mTimer.visibility = View.GONE
+            mSetComplete.visibility = View.VISIBLE
+
+        }
+
+        override fun onTick(millisUntilFinished: Long) {
+            mTimer.text = (millisUntilFinished / 1000).toString() + ""
+            println("Timer  : " + millisUntilFinished / 1000)
+        }
+    }
 
 }

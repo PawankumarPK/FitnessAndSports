@@ -21,6 +21,38 @@
         android:textSize="@dimen/infoText"
         android:layout_margin="10dp"/>
 
+    <TextView
+        android:id="@+id/mSetComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Two more set left.."
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:layout_marginBottom="100dp"
+        android:visibility="gone"
+        android:fontFamily="@font/comfortaa_light"
+        />
+
+
+    <TextView
+        android:id="@+id/mTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_marginBottom="26dp"
+        android:fontFamily="@font/comfortaa_light"/>
+
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/videoFB"
         android:layout_width="wrap_content"
@@ -34,6 +66,7 @@
 
 
     <Button
+        android:id="@+id/mStartTimer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Start Timer"
