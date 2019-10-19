@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">FitnessAndSports</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chestString">
+        Lie on the bench with your eyes under the bar
+Grab the bar with a medium grip-width (thumbs around the bar!)
+Unrack the bar by straightening your arms
+Lower the bar to your mid-chest
+Press the bar back up until your arms are straight</string>
+
+    <string name="chestInjury">
+        Injuries during Bench Press muscles affected are anterior deltoids and pactorial major \n\n
+    • Cold Therapy- Apply an ice pack on your painful area for about 5-15 minutes for 3 days.\n\n
+    • Apply heat pack for 10 minutes at your painful area after that.\n\n
+    • Take over the counter drugs (OTC) nonsteroidal anti-inflammatary drugs( NAIDs ) such as Ibuprofen (Advil) and naproxen sodium (Aleve)\n\n
+    • Avoid Physical activites for some time.\n\n
+
+    </string>
 </resources>

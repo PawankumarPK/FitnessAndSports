@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragmentSubCatagories.CategoriesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/mRelativeLayoutOne"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/mChest"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/benchpresses"
+                android:layout_marginLeft="@dimen/leftMargin"
+                android:layout_marginStart="@dimen/leftMargin" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/mChest"
+                android:layout_toRightOf="@+id/mChest"
+                android:fontFamily="@font/comfortaa_bold"
+                android:gravity="center"
+                android:text="BENCH PRESS"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textViewSize"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_arrow_right" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mRelativeLayoutTwo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/mBack"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/dumbellpress"
+                android:layout_marginLeft="@dimen/leftMargin"
+                android:layout_marginStart="@dimen/leftMargin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/mBack"
+                android:layout_toRightOf="@+id/mBack"
+                android:fontFamily="@font/comfortaa_bold"
+                android:gravity="center"
+                android:text="DUMBBELL                   PRESS"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textViewSize"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_arrow_right" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/mRelativeLayoutThree"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/mAbs"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/inclinepresses"
+                android:layout_marginLeft="@dimen/leftMargin"
+                android:layout_marginStart="@dimen/leftMargin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/mAbs"
+                android:layout_toRightOf="@+id/mAbs"
+                android:fontFamily="@font/comfortaa_bold"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="INCLINE PRESS"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textViewSize"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_arrow_right" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="textViewSize">20sp</dimen>
+    <dimen name="leftMargin">10sp</dimen>
+    <dimen name="infoText">16sp</dimen>
+
+
+</resources>
