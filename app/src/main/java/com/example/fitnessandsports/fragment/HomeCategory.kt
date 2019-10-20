@@ -6,54 +6,38 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.fitnessandsports.R
-import com.example.fitnessandsports.fragmentSubCatagories.BaseFragment
-import android.widget.Toast
-import com.example.fitnessandsports.activity.BaseActivity
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_auth.*
 
+import com.example.fitnessandsports.R
+import com.example.fitnessandsports.activity.BaseActivity
+import com.example.fitnessandsports.fragmentSubCatagories.BaseFragment
+import com.example.fitnessandsports.fragmentSubCatagories.CategoriesFragment
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_home_category.*
 
 /**
  * A simple [Fragment] subclass.
  */
-class AuthFragment : BaseFragment() {
+class HomeCategory : BaseFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_auth, container, false)
+        return inflater.inflate(R.layout.fragment_home_category, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         baseActivity = activity as BaseActivity
-        baseActivity.mToolbarTextview.text= "Authenticatiion"
+        baseActivity.mToolbarTextview.text= "Select Exercise Type"
         baseActivity.mCoin.visibility = View.GONE
 
-        mDone.setOnClickListener { homeCat() }
+        mGym.setOnClickListener { homeCat() }
+
     }
 
     private fun homeCat(){
         fragmentManager!!.beginTransaction().addToBackStack(null)
-            .replace(R.id.mFrameLayout,HomeCategory())
+            .replace(R.id.mFrameLayout,CategoriesFragment())
             .commit()
     }
-
-
-/*
-
-    fun SignIn(view: View) {
-
-        val username = usernameET.getText().toString()
-        val password = passwordET.getText().toString()
-
-        if (username == "cake" && password == "robot") {
-            Toast.makeText(this, "You Signed In", Toast.LENGTH_SHORT).show()
-        } else {
-            Toast.makeText(this, "Invalid Login", Toast.LENGTH_SHORT).show()
-        }
-    }
-*/
-
 
 }

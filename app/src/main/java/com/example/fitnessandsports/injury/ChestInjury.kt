@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnessandsports.R
 import com.example.fitnessandsports.fragmentSubCatagories.BaseFragment
 import com.example.fitnessandsports.utils.Data
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_chest_injury.*
 import java.util.*
 import kotlin.collections.ArrayList
@@ -34,6 +35,8 @@ class ChestInjury : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        baseActivity.mCoin.visibility = View.GONE
 
         data = fill_with_data()
 

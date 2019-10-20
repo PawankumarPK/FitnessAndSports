@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/cardcorner_gradients"
+    tools:context=".fragment.WalletFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mr. Pawan"
+        android:textSize="40sp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/comfortaa_light"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="70dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:cardCornerRadius="35dp"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/mCoins"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_coin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:id="@+id/mNoCoins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 Coins"
+            android:layout_below="@+id/mCoins"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp"
+            android:fontFamily="@font/comfortaa_light"
+            android:textStyle="bold"
+            android:layout_margin="20dp" />
+
+
+
+            <TextView
+                android:id="@+id/mCoinAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 Rupees"
+                android:layout_marginBottom="30dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/comfortaa_light"
+                android:textStyle="bold"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

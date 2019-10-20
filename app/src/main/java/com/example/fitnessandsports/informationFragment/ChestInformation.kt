@@ -46,7 +46,7 @@ class ChestInformation : BaseFragment() {
 
         data = fill_with_data()
 
-        val timer = MyCounter(60000, 1000)
+        val timer = MyCounter(30000, 1000)
 
         horizontalAdapter = HorizontalAdapter(data!!, baseActivity)
         val horizontalLayoutManager = LinearLayoutManager(baseActivity, LinearLayoutManager.HORIZONTAL, false)
@@ -58,7 +58,11 @@ class ChestInformation : BaseFragment() {
             mStartTimer.visibility = View.GONE
             mTimer.visibility = View.VISIBLE
             mSetComplete.visibility = View.GONE
+            injuryFB.isEnabled = false
+            videoFB.isEnabled = false
 
+            injuryFB.isClickable = false
+            videoFB.isClickable = false
         }
 
         videoFB.setOnClickListener {
@@ -143,6 +147,10 @@ class ChestInformation : BaseFragment() {
             mTimer.visibility = View.GONE
             mSetComplete.visibility = View.VISIBLE
             baseActivity.mCoin.visibility = View.VISIBLE
+            injuryFB.isEnabled = true
+            videoFB.isEnabled = true
+            injuryFB.isClickable = true
+            videoFB.isClickable = true
 
 
         }
