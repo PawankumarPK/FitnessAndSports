@@ -25,26 +25,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/mTextInputPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_below="@+id/mTextInputName">
-
-        <EditText
-            android:id="@+id/mPasswordEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter Password" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
     <Button
         android:id="@+id/mDone"
         android:layout_width="match_parent"
@@ -54,7 +34,7 @@
         android:fontFamily="@font/comfortaa_bold"
         android:text="Done"
         android:textAllCaps="false"
-        android:layout_below="@+id/mTextInputPassword"
+        android:layout_below="@+id/mTextInputName"
         android:textColor="@color/white"
         android:textSize="22sp"
         android:layout_marginTop="100dp"
